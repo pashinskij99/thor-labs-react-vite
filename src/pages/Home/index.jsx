@@ -111,9 +111,7 @@ const Pay = () => {
     <div className={styles.pay}>
       <div className={styles.pay__header}>
         <div className={styles.pay__headerTextWrapper}>
-          <div className={styles.pay__headerIcon}>
-            <USDCIcon />
-          </div>
+          <USDCIcon />
           <div className={styles.pay__headerText}>Pay with USDC</div>
         </div>
 

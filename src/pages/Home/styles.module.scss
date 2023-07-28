@@ -1,3 +1,5 @@
+@import '../../styles/responsive';
+
 .home {
   padding-top: 30px;
 
@@ -6,6 +8,10 @@
     grid-template-columns: 1fr 0.5fr;
     justify-content: space-between;
     column-gap: 16px;
+    @include responsive(xl) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
   }
 }
 
@@ -113,6 +119,7 @@
   }
   &__shareIcon {
     fill: rgb(247, 108, 27);
+    display: flex;
   }
   // footer - end
 }

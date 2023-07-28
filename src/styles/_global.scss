@@ -32,6 +32,7 @@ button {
   }
   @include responsive(xl) {
     max-width: 1024px;
+    padding: 0 30px;
   }
   @include responsive(lg) {
     max-width: 768px;
@@ -40,6 +41,7 @@ button {
     max-width: 640px;
   }
   @include responsive(sm) {
+    padding: 0 16px;
     max-width: 100%;
   }
 }
