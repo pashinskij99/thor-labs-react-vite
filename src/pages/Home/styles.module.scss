@@ -2,6 +2,13 @@
 
 .home {
   padding-top: 30px;
+  @include responsive(xl) {
+    padding-top: 10px;
+  }
+
+  @include responsive(sm) {
+    padding-top: 0;
+  }
 
   &__container {
     display: grid;
@@ -128,116 +135,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.pay {
-  background-color: var(--cart-background);
-  flex: 1 0 auto;
-  padding: 16px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  &__headerTextWrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  &__headerText {
-  }
-  &__headerIcon {
-  }
-
-  &__disconnectWalletButton {
-    button {
-      cursor: pointer;
-      display: inline-flex;
-      line-height: 1;
-      -webkit-box-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      justify-content: center;
-      border-radius: 0.5rem;
-      height: auto;
-      padding: 5px 10px;
-      font-weight: 400;
-      text-transform: capitalize;
-      transition-property: color, background-color, border-color,
-        text-decoration-color, fill, stroke;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 75ms;
-      background: #706e6e9c !important;
-      color: rgb(255, 255, 255) !important;
-      fill: rgb(255, 255, 255) !important;
-    }
-  }
-
-  &__body {
-  }
-  &__totalPrice {
-    display: flex;
-    align-items: center;
-    border-radius: 0.5rem;
-    padding: 10px;
-    background: var(--total-price-background);
-    color: var(--total-price-text-color);
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  &__totalPriceText {
-  }
-  &__totalPriceCount {
-    font-weight: 500;
-  }
-
-  &__connectWalletButton {
-    button {
-      cursor: pointer;
-      width: 100%;
-      display: inline-flex;
-      -webkit-box-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      justify-content: center;
-      border-radius: 0.5rem;
-      // padding: 0.75rem 2rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      transition-property: color, background-color, border-color,
-        text-decoration-color, fill, stroke;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 75ms;
-      box-shadow: rgba(#fb8900, 0.6) 0px 10px 15px -3px,
-        rgba(#fb8900, 0.6) 0px 4px 6px -4px !important;
-      background: #fb8900 !important;
-      color: rgb(255, 255, 255) !important;
-      fill: rgb(255, 255, 255) !important;
-    }
-    margin-bottom: 20px;
-  }
-
-  &__footer {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  &__withQR {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  &__withQRText {
-  }
-  &__withQRIcon {
-    width: 20px;
-    height: 20px;
-  }
 }
 
 .payDescription {
