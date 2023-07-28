@@ -1,0 +1,60 @@
+:root {
+  --xxs: 460px;
+  --xs: 576px;
+  --sm: 640px;
+  --md: 768px;
+  --lg: 1024px;
+  --xl: 1280px;
+  --xxl: 1536px;
+
+  --color-toggle-light: #f6d447;
+  --color-toggle-dark: #1f0542;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --font-inter: 'Inter', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+:root[data-theme='light'] {
+  --background-color: rgb(245, 247, 250);
+  --font-color: rgb(128, 139, 157);
+  --button-color: #fb8900;
+  --cart-background: #fff;
+  --total-price-text-color: rgb(167, 53, 13);
+  --total-price-background: #fff5e9;
+  --box-shadow-default: 0px 8px 10px rgba(195, 200, 209, 0.2);
+  --helio-text-container-title: #5a6578;
+  --report-link-text-color: rgb(247, 108, 27);
+  --report-link-background: rgb(255, 245, 233);
+  --qr-text-color: #a7350d;
+  --body-text-color: rgb(128, 139, 157);
+  --body-text-color2: rgb(90, 101, 120);
+  --link-background: rgb(245, 247, 250);
+  --description-text-color: #808b9d;
+  --description-text-background: #ebeff3;
+  --see-term-color: #a7350d;
+}
+
+:root[data-theme='dark'] {
+  --background-color: rgb(25, 25, 25);
+  --font-color: rgb(237, 239, 242);
+  --button-color: rgb(188, 87, 39);
+  --cart-background: #2a2a2b;
+  --total-price-text-color: #fff;
+  --total-price-background: #3a3b3c;
+  --box-shadow-default: 0px 8px 10px rgba(195, 200, 209, 0.2);
+  --helio-text-container-title: #fff;
+  --report-link-text-color: rgb(225, 114, 49);
+  --report-link-background: rgb(58, 59, 60);
+  --qr-text-color: #e17231;
+  --body-text-color: rgb(237, 239, 242);
+  --body-text-color2: rgb(176, 178, 192);
+  --link-background: rgb(58, 59, 60);
+  --description-text-color: #61646f;
+  --description-text-background: #242525;
+  --see-term-color: rgb(225, 114, 49);
+}

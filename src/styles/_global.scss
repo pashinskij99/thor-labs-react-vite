@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-inter);
+  font-size: 100%;
+  background-color: var(--background-color);
+  color: var(--body-text-color);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.container {
+  max-width: 1536px;
+  margin: 0 auto;
+
+  @include responsive(xxl) {
+    max-width: 1280px;
+  }
+  @include responsive(xl) {
+    max-width: 1024px;
+  }
+  @include responsive(lg) {
+    max-width: 768px;
+  }
+  @include responsive(md) {
+    max-width: 640px;
+  }
+  @include responsive(sm) {
+    max-width: 100%;
+  }
+}
+
+.wallet-adapter-button.wallet-adapter-button-trigger {
+  // display: contents;
+  // i {
+  //   display: none;
+  // }
+}
+
+.wallet-adapter-dropdown {
+  display: block;
+}
