@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import styles from './styles.module.scss'
+import { themes } from '../../../../theme/ThemeContext'
 
 const defaultOptions = {
   invertedIconLogic: false,
@@ -10,7 +11,7 @@ const ThemeToggleButton = ({
   onChange,
   invertedIconLogic = defaultOptions.invertedIconLogic,
 }) => {
-  const isDark = theme === 'dark'
+  const isDark = theme === themes.dark
   return (
     <label
       className={clsx(styles.container, {

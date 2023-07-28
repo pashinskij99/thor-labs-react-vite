@@ -1,14 +1,16 @@
 import clsx from 'clsx'
 import styles from './styles.module.scss'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import ThemeToggleButton from '../../components/UI/Button/ThemeToggle'
-import { ThemeContext } from '../../theme/ThemeContext'
+import { ThemeContext, themes } from '../../theme/ThemeContext'
 
 export const Header = () => {
   const { setTheme, theme } = useContext(ThemeContext)
 
   const handleTheme = () => {
-    setTheme((prevState) => (prevState === 'light' ? 'dark' : 'light'))
+    setTheme((prevState) =>
+      prevState === themes.light ? themes.dark : themes.light
+    )
   }
 
   return (

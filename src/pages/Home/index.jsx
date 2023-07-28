@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import clsx from 'clsx'
 import styles from './styles.module.scss'
 import {
