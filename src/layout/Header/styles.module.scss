@@ -6,6 +6,72 @@
     align-items: center;
   }
 
+  &__userPanel {
+    display: flex;
+    align-items: center;
+  }
+  &__userPanelUSDC,
+  &__userPanelSOL {
+    display: flex;
+    text-align: end;
+    column-gap: 10px;
+    align-items: center;
+  }
+
+  &__userPanelUSDCText,
+  &__userPanelSOLText {
+    font-size: 13px;
+  }
+  &__userPanelUSDCCount,
+  &__userPanelSOLCount {
+    font-weight: 700;
+  }
+  &__userPanelUSDCIcon,
+  &__userPanelSOLIcon {
+    width: 24px;
+    height: 24px;
+  }
+  &__userPanelUSDC {
+    margin-right: 26px;
+  }
+  &__userPanelSOL {
+    margin-right: 10px;
+  }
+  &__userPanelInfo {
+    font-size: 13px;
+  }
+  &__userPanelInfoId {
+    font-weight: 700;
+    display: flex;
+    column-gap: 5px;
+    margin-right: 16px;
+  }
+  &__userPanelInfoIdCopy {
+    display: contents;
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: #e17231;
+    }
+  }
+  &__userPanelInfoStatus {
+  }
+  &__userPanelDisconnect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--disconnect-background);
+    box-shadow: var(--disconnect-box-shadow);
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: #e17231;
+    }
+  }
+
   &__logo {
   }
   &__theme {

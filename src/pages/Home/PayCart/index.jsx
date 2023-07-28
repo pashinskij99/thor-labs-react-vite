@@ -1,14 +1,11 @@
 import styles from './styles.module.scss'
-import {
-  WalletDisconnectButton,
-  WalletMultiButton,
-} from '@solana/wallet-adapter-react-ui'
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
 import { useConnection, useWallet } from '@solana/wallet-adapter-react'
-import { useState } from 'react'
+// import { useState } from 'react'
 import { QRCodeIcon, USDCIcon } from '../../../components/Icons'
 
 export const PayCart = () => {
-  const [balance, setBalance] = useState(null)
+  // const [balance, setBalance] = useState(null)
 
   const { connection } = useConnection()
   const wallet = useWallet()
@@ -19,15 +16,15 @@ export const PayCart = () => {
     'publicKey >>': wallet.publicKey,
   })
 
-  const getBalance = async () => {
-    try {
-      const balance = await connection.getBalance(wallet.publicKey)
-      setBalance(balance)
-      console.log('Balance:', balance)
-    } catch (error) {
-      console.error('Error fetching balance:', error)
-    }
-  }
+  // const getBalance = async () => {
+  //   try {
+  //     const balance = await connection.getBalance(wallet.publicKey)
+  //     setBalance(balance)
+  //     console.log('Balance:', balance)
+  //   } catch (error) {
+  //     console.error('Error fetching balance:', error)
+  //   }
+  // }
 
   return (
     <div className={styles.pay}>
@@ -37,13 +34,13 @@ export const PayCart = () => {
           <div className={styles.pay__headerText}>Pay with USDC</div>
         </div>
 
-        <>
+        {/* <>
           {wallet.connected && (
             <div className={styles.pay__disconnectWalletButton}>
               <WalletDisconnectButton>Disconnect</WalletDisconnectButton>
             </div>
           )}
-        </>
+        </> */}
       </div>
 
       {/* <button onClick={getBalance}>Get Balance</button>

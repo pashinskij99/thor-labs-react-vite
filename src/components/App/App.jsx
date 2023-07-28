@@ -19,6 +19,7 @@ import {
   ConnectionProvider,
   WalletProvider,
 } from '@solana/wallet-adapter-react'
+import { ToastContainer } from 'react-toastify'
 
 export const App = () => {
   const network = WalletAdapterNetwork.Devnet
@@ -44,6 +45,18 @@ export const App = () => {
             <Header />
             <Home />
           </main>
+          <ToastContainer
+            position='bottom-right'
+            autoClose={5000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme='light'
+          />
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>

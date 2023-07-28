@@ -4,13 +4,17 @@ export const truncateString = (
   endCharCount = 0,
   dotCount = 3
 ) => {
-  if (str.length <= firstCharCount + endCharCount) {
-    return str // No truncation needed
+  if (str) {
+    if (str.length <= firstCharCount + endCharCount) {
+      return str // No truncation needed
+    }
+
+    const firstPortion = str.slice(0, firstCharCount)
+    const endPortion = str.slice(-endCharCount)
+    const dots = '.'.repeat(dotCount)
+
+    return `${firstPortion}${dots}${endPortion}`
   }
 
-  const firstPortion = str.slice(0, firstCharCount)
-  const endPortion = str.slice(-endCharCount)
-  const dots = '.'.repeat(dotCount)
-
-  return `${firstPortion}${dots}${endPortion}`
+  return null
 }

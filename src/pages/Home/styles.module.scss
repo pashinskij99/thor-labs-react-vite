@@ -138,14 +138,41 @@
 }
 
 .payDescription {
-  font-size: 12px;
-  padding: 5px 7px;
-  color: var(--description-text-color);
-  background-color: var(--description-text-background);
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  &__description {
+    width: fit-content;
+    font-size: 12px;
+    padding: 5px 7px;
+    color: var(--description-text-color);
+    background-color: var(--description-text-background);
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
   &__b {
   }
   &__link {
     color: var(--see-term-color);
+  }
+
+  &__additional {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  &__additionalAudited {
+    font-size: 14px;
+    background-color: var(--link-background);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  &__additionalAuditedThemeSwitcher {
+    div:global(.react-switch-handle) {
+      div {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 }

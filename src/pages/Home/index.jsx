@@ -5,6 +5,8 @@ import { QuestionIcon, ShareIcon } from '../../components/Icons'
 
 import { truncateString } from '../../utils/truncateString'
 import { PayCart } from './PayCart'
+import ReactSwitch from 'react-switch'
+import ThemeToggleButton from '../../components/UI/Button/ThemeToggle'
 
 export const Home = () => {
   return (
@@ -62,14 +64,32 @@ export const Home = () => {
         <div className={styles.rightSide}>
           <PayCart />
 
-          <p className={styles.payDescription}>
-            <b className={styles.payDescription__b}>Disclaimer:</b> This is a
-            DeFi payment that can&apos;t be reversed. Funds go directly to the
-            merchant.{' '}
-            <a className={styles.payDescription__link} href='#'>
-              See our terms
-            </a>
-          </p>
+          <div className={styles.payDescription}>
+            <p className={styles.payDescription__description}>
+              <b className={styles.payDescription__b}>Disclaimer:</b> This is a
+              DeFi payment that can&apos;t be reversed. Funds go directly to the
+              merchant.{' '}
+              <a className={styles.payDescription__link} href='#'>
+                See our terms
+              </a>
+            </p>
+
+            <div className={styles.payDescription__additional}>
+              {/* <img
+                className={styles.payDescription__additionalImg}
+                src='/images/logo/logo-bigger.png'
+                alt='logo'
+              /> */}
+              <p className={styles.payDescription__additionalAudited}>
+                Audited
+              </p>
+              <ThemeToggleButton
+                className={
+                  styles.payDescription__additionalAuditedThemeSwitcher
+                }
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,34 +1,45 @@
-import clsx from 'clsx'
-import styles from './styles.module.scss'
-import { themes } from '../../../../theme/ThemeContext'
+import { useContext } from 'react'
+import { ThemeContext, themes } from '../../../../theme/ThemeContext'
+import ReactSwitch from 'react-switch'
+import { SunIcon } from '../../../Icons'
 
-const defaultOptions = {
-  invertedIconLogic: false,
-}
+// const defaultOptions = {
+//   invertedIconLogic: false,
+// }
 
 const ThemeToggleButton = ({
-  theme,
-  onChange,
-  invertedIconLogic = defaultOptions.invertedIconLogic,
+  // theme,
+  // onChange,
+  // invertedIconLogic = defaultOptions.invertedIconLogic,
+  className,
 }) => {
+  const { setTheme, theme } = useContext(ThemeContext)
+
   const isDark = theme === themes.dark
+  const handleTheme = () => {
+    setTheme((prevState) =>
+      prevState === themes.light ? themes.dark : themes.light
+    )
+  }
   return (
-    <label
-      className={clsx(styles.container, {
-        [styles.IsDark]: isDark,
-        [styles.IsLight]: !isDark,
-      })}
-      title={isDark ? 'Activate light mode' : 'Activate dark mode'}
-      aria-label={isDark ? 'Activate light mode' : 'Activate dark mode'}
-    >
-      <input
-        type='checkbox'
-        defaultChecked={invertedIconLogic ? !isDark : isDark}
-        onChange={onChange}
-      />
-      <div />
-    </label>
+    <ReactSwitch
+      onChange={handleTheme}
+      checkedIcon={false}
+      uncheckedIcon={false}
+      checkedHandleIcon={<SunIcon width={20} height={20} />}
+      uncheckedHandleIcon={
+        <img src='/icons/dark.png' width={20} height={20} alt='light theme' />
+        // <img src='/icons/sun.png' width={20} height={20} alt='light theme' />
+      }
+      checked={isDark}
+      offColor='#fb8900'
+      onColor='#2a2a2b'
+      onHandleColor='#fb8900'
+      offHandleColor='#fff'
+      className={className}
+    />
   )
+  // <img src='/icons/sun.png' alt='light theme' />
 }
 
 export default ThemeToggleButton

@@ -37,6 +37,8 @@
   --description-text-color: #808b9d;
   --description-text-background: #ebeff3;
   --see-term-color: #a7350d;
+  --disconnect-background: #fff;
+  --disconnect-box-shadow: 0 6px 5px #fed7aa;
 }
 
 :root[data-theme='dark'] {
@@ -57,4 +59,6 @@
   --description-text-color: #d1cdcd;
   --description-text-background: #242525;
   --see-term-color: rgb(225, 114, 49);
+  --disconnect-background: #2a2a2b;
+  --disconnect-box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
 }
