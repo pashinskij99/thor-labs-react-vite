@@ -1,5 +1,5 @@
 import { Header } from '../../layout/Header'
-import { Home } from '../../pages/home'
+import { Home } from '../../pages/Home'
 import { clusterApiUrl } from '@solana/web3.js'
 import {
   WalletAdapterNetwork,
@@ -21,15 +21,10 @@ import {
 } from '@solana/wallet-adapter-react'
 
 export const App = () => {
-  // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
   const network = WalletAdapterNetwork.Devnet
-  // You can also provide a custom RPC endpoint.
   const endpoint = useMemo(() => clusterApiUrl(network), [network])
   console.log(endpoint)
-  //wallet connection Error handling
-  // const walletConnectionErr = (error = WalletError) => {
-  //   console.log('Wallet Connection Error:', error)
-  // }
+
   const wallet = useMemo(
     () => [
       new PhantomWalletAdapter(),
